@@ -16,6 +16,7 @@
 		8C1B354523674797009C0593 /* Mares_Personality_QuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B354423674797009C0593 /* Mares_Personality_QuizUITests.swift */; };
 		8C1B35552367570D009C0593 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B35542367570D009C0593 /* QuestionViewController.swift */; };
 		8C1B35572367571C009C0593 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B35562367571C009C0593 /* ResultsViewController.swift */; };
+		8C6A158B236C8F2F00E27190 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6A158A236C8F2F00E27190 /* QuestionData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8C1B354623674797009C0593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C1B35542367570D009C0593 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		8C1B35562367571C009C0593 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		8C6A158A236C8F2F00E27190 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				8C1B352623674796009C0593 /* IntroViewController.swift */,
 				8C1B35562367571C009C0593 /* ResultsViewController.swift */,
 				8C1B352823674796009C0593 /* Main.storyboard */,
+				8C6A158A236C8F2F00E27190 /* QuestionData.swift */,
 				8C1B35542367570D009C0593 /* QuestionViewController.swift */,
 				8C1B352B23674797009C0593 /* Assets.xcassets */,
 				8C1B352D23674797009C0593 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				8C1B352723674796009C0593 /* IntroViewController.swift in Sources */,
 				8C1B352323674796009C0593 /* AppDelegate.swift in Sources */,
+				8C6A158B236C8F2F00E27190 /* QuestionData.swift in Sources */,
 				8C1B35552367570D009C0593 /* QuestionViewController.swift in Sources */,
 				8C1B35572367571C009C0593 /* ResultsViewController.swift in Sources */,
 			);
