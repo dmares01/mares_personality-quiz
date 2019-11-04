@@ -176,7 +176,7 @@
                                 <rect key="frame" x="20" y="372" width="374" height="98.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hyX-Sm-qru">
-                                        <rect key="frame" x="36" y="0.0" width="302" height="31"/>
+                                        <rect key="frame" x="34" y="0.0" width="306" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="93" translatesAutoresizingMaskIntoConstraints="NO" id="Xcj-AB-vSV">
                                         <rect key="frame" x="98.5" y="39" width="177" height="20.5"/>
@@ -269,21 +269,53 @@
                     <view key="view" contentMode="scaleToFill" id="xCD-cl-8z0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAU-ZW-Azc">
+                                <rect key="frame" x="20" y="410" width="374" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIB-nW-5Gn">
+                                <rect key="frame" x="20" y="336" width="374" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FkZ-ak-xuP" firstAttribute="trailing" secondItem="RIB-nW-5Gn" secondAttribute="trailing" constant="20" id="21w-T2-hgv"/>
+                            <constraint firstItem="FkZ-ak-xuP" firstAttribute="bottom" secondItem="EAU-ZW-Azc" secondAttribute="bottom" constant="376" id="Dy4-0i-OqF"/>
+                            <constraint firstItem="FkZ-ak-xuP" firstAttribute="trailing" secondItem="EAU-ZW-Azc" secondAttribute="trailing" constant="20" id="NLO-dG-oid"/>
+                            <constraint firstItem="EAU-ZW-Azc" firstAttribute="leading" secondItem="FkZ-ak-xuP" secondAttribute="leading" constant="20" id="Q1m-SG-xEd"/>
+                            <constraint firstItem="EAU-ZW-Azc" firstAttribute="top" secondItem="RIB-nW-5Gn" secondAttribute="bottom" constant="52" id="Z9p-qp-kvU"/>
+                            <constraint firstItem="EAU-ZW-Azc" firstAttribute="centerY" secondItem="xCD-cl-8z0" secondAttribute="centerY" id="hHo-bv-VQ6"/>
+                            <constraint firstItem="RIB-nW-5Gn" firstAttribute="top" secondItem="FkZ-ak-xuP" secondAttribute="top" constant="280" id="jU8-SF-y5q"/>
+                            <constraint firstItem="RIB-nW-5Gn" firstAttribute="leading" secondItem="FkZ-ak-xuP" secondAttribute="leading" constant="20" id="y7t-yI-rjT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FkZ-ak-xuP"/>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="qAH-Uo-G8d">
-                        <barButtonItem key="backBarButtonItem" title="Done" id="n2Z-yq-CMI"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="n2Z-yq-CMI">
+                            <connections>
+                                <segue destination="OT1-1v-oJ7" kind="unwind" unwindAction="unwindToQuizIntroductionWithSegue:" id="6uC-cS-dVr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultAnswerLabel" destination="RIB-nW-5Gn" id="i6N-Qh-6eZ"/>
+                        <outlet property="resultDefinitionLabel" destination="EAU-ZW-Azc" id="jkI-py-3Gb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niu-WU-qf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="OT1-1v-oJ7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2757.971014492754" y="137.94642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y13-DX-Ez1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6wZ-6N-DEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g82-11-zLc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="3Dp-pb-91l"/>
@@ -296,6 +328,7 @@
                         <segue destination="URl-Ry-dF8" kind="relationship" relationship="rootViewController" id="mZh-DJ-B4p"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6wZ-6N-DEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="137.94642857142856"/>
         </scene>
